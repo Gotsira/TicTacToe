@@ -146,12 +146,9 @@ public class TicTacToe {
 		}
 		StdDraw.setXscale(-0.5, 2.5);
 		StdDraw.setYscale(-0.5, 2.5);
-		char currentPlayer = 'X';
-		Random rand = new Random();
-		int x = rand.nextInt(2) + 0;
-		int y = rand.nextInt(2) + 0;
-		board[x][y] = 'O';
+		char currentPlayer = 'O';
 		draw(board, currentPlayer);
+		handleMouseClick(board, currentPlayer);
 		while (!gameOver(board)) {
 			if (currentPlayer == 'X') {
 				Best best = chooseMove(board, currentPlayer);
